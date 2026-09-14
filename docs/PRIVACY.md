@@ -32,7 +32,7 @@ Aero is intended to reduce common forms of browser tracking, including:
 
 
 
-Aero also aims to avoid privacy-hostile product features entirely. The project does not include ads, affiliate links, cryptocurrency features, telemetry, VPN upsells, or AI features that send user data to a remote service.
+Aero does not include privacy-hostile product features. The project does not include ads, affiliate links, cryptocurrency features, telemetry, VPN upsells, or AI features that send user data to a remote service.
 
 
 
@@ -158,6 +158,22 @@ These are product decisions, not optional privacy modes.
 
 
 
+## What Aero will never do
+
+Aero will never include:
+
+- Advertising
+- "Acceptable ads"
+- Affiliate links
+- Cryptocurrency wallets or related features
+- VPN upsells
+- Sponsored content
+- Telemetry
+- AI features that send user data to a server
+
+These are project boundaries, not temporary product choices.
+
+If any of these change, that change is a fork.
 ## Extensions
 
 
@@ -218,6 +234,18 @@ Aero should not be presented as a replacement for Tor Browser or other tools des
 
 
 
+## Verifiability
+
+Privacy claims should be verifiable in a shipped build.
+
+Aero should make its privacy behavior auditable through:
+
+- Reproducible builds where practical, so published binaries can be compared against source
+- Auditable network behavior, so users and researchers can inspect what connections Aero makes by default
+- Release notes that document changes to default network connections, telemetry behavior, and privacy-relevant features
+- Clear separation between features that are implemented and features that are still planned
+
+If a privacy claim cannot yet be verified in a released build, it should be labeled as aspirational rather than presented as an implemented guarantee.
 ## Honest limitations
 
 
@@ -231,4 +259,10 @@ Privacy claims should match what is actually implemented and verifiable in the c
 
 
 If Aero cannot protect against something, the documentation should say so clearly.
+## Reporting privacy issues
 
+If you find unexpected network traffic, a privacy leak, telemetry, or any request that should not be present, open an issue in the Aero repository with as much detail as possible.
+
+Privacy regressions should be treated with the same seriousness as security bugs.
+
+Include reproduction steps, affected versions, relevant logs or network traces, and any other information that helps verify the issue.
