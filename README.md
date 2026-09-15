@@ -38,6 +38,11 @@ Lane 6 (packaging) and Lane 7 (upstream sync) are deferred until v0.1 ships.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bug fixes and docs go straight to PR. New features need an issue first. Async-first — this project is maintained around a school schedule.
 
+## Contributors
+
+- [@builtbyashwin](https://github.com/builtbyashwin) — maintainer, build/CI, upstream sync
+- [@Arman16-1998](https://github.com/Arman16-1998) — docs, privacy research
+
 ## License
 
 GPL-3.0. If you fork Aero and add telemetry, you have to publish that fact. That's the point.
