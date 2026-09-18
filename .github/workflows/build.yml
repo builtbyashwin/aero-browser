@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — gclient sync
-        run: echo "TODO: depot_tools setup, gclient sync of Chromium source"
+      - name: Placeholder gclient sync
+        run: echo "TODO depot_tools setup, gclient sync of Chromium source"
 
   patch:
     name: Apply ungoogled-chromium patches
@@ -18,26 +18,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — quilt push
-        run: echo "TODO: download source artifact, apply patch series"
+      - name: Placeholder quilt push
+        run: echo "TODO download source artifact, apply patch series"
 
   gn:
-    name: Generate build files (gn gen)
+    name: Generate build files gn gen
     needs: patch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — gn gen
-        run: echo "TODO: run gn gen with release args"
+      - name: Placeholder gn gen
+        run: echo "TODO run gn gen with release args"
 
   compile:
-    name: Compile (ninja)
+    name: Compile ninja
     needs: gn
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — ninja
-        run: echo "TODO: ninja -C out/Release chrome — this is the multi-hour step"
+      - name: Placeholder ninja
+        run: echo "TODO ninja -C out/Release chrome, this is the multi-hour step"
 
   package:
     name: Package binary
@@ -45,15 +45,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — tarball
-        run: echo "TODO: tar the binary, upload as artifact"
+      - name: Placeholder tarball
+        run: echo "TODO tar the binary, upload as artifact"
 
   release:
     name: Upload to GitHub Releases
     needs: package
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder — release
-        run: echo "TODO: upload to Releases on tag, manual trigger only"
+      - name: Placeholder release
+        run: echo "TODO upload to Releases on tag, manual trigger only"
